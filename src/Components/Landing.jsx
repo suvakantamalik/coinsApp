@@ -49,7 +49,8 @@ const Landing = () => {
         }
         else {
             const filtered = data.filter((coins) =>
-                coins.name.toLowerCase().includes(e.target.value.toLowerCase())
+                coins.name.toLowerCase().includes(e.target.value.toLowerCase())||
+                coins.symbol.toLowerCase().includes(e.target.value.toLowerCase())
             );
             console.log(filtered);
             setFilterData(filtered);
